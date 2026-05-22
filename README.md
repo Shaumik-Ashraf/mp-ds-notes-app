@@ -1,24 +1,8 @@
-# README
+# MP DS Notes App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A note-taking app mockup using [MP's AI paradigm](https://github.com/mattpocock/skills) and DeepSeek Flash/Pro on Ruby on Rails 8.1.
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
