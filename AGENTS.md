@@ -2,7 +2,8 @@
 
 ## Stack
 - Rails 8.1, Ruby 4.0.1, SQLite3
-- Propshaft (asset pipeline), Importmap (JS), Hotwire (Turbo + Stimulus)
+- Propshaft (asset pipeline), Importmap (JS)
+- **Removed Hotwire**: turbo-rails and stimulus-rails were removed from the Gemfile. The app uses vanilla JS (fetch/addEventListener) for interactivity. No Turbo Drive, no Stimulus controllers.
 - Production: Kamal Docker deploy, Thruster server, Solid Queue/Cache/Cable (SQLite-backed)
 
 ## No git writes from agent
@@ -42,8 +43,22 @@ The LLM agent MUST NOT stage, commit, push, or otherwise write to git. Only the 
 ## Available skills (Matt Pocock)
 Skills listed in `skills-lock.json`: caveman, diagnose, grill-me, grill-with-docs, handoff, improve-codebase-architecture, prototype, setup-matt-pocock-skills, tdd, to-issues, to-prd, triage, write-a-skill, zoom-out. Load via the `skill` tool.
 
+## Agent skills
+
+### Issue tracker
+
+Issues live as local markdown files under `.scratch/`. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Uses default label names (needs-triage, needs-info, ready-for-agent, ready-for-human, wontfix). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context repo — CONTEXT.md at root, ADRs under docs/adr/. See `docs/agents/domain.md`.
+
 ## Config files of note
-- `config/routes.rb` -- only health check route (`/up`)
+- `config/routes.rb` -- health check route (`/up`) + notes resources + Devise routes
 - `config/database.yml` -- separate production DBs for cache, queue, cable
 - `config/deploy.yml` -- Kamal config, single web server, localhost:5555 registry
 - `config/ci.rb` -- local CI steps (used by `bin/ci`)
