@@ -2,7 +2,7 @@
 
 <div class="note-actions-bar">
   <%= link_to "Edit", edit_note_path(@note), class: "button" %>
-  <%= link_to "Delete", @note, class: "button button-danger", data: { confirm: "Delete this note?" }, method: :delete %>
+  <%= link_to "Delete", @note, class: "button button-danger", data: { method: :delete, confirm: "Delete this note?" } %>
   <%= link_to "Back to notes", notes_path, class: "button button-outline" %>
 </div>
 

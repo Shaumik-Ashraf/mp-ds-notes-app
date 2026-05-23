@@ -12,7 +12,7 @@
         <div class="note-actions">
           <%= link_to "View", note %>
           <%= link_to "Edit", edit_note_path(note) %>
-          <%= link_to "Delete", note, data: { confirm: "Delete this note?" }, method: :delete %>
+          <%= link_to "Delete", note, data: { method: :delete, confirm: "Delete this note?" } %>
         </div>
       </div>
     <% end %>
