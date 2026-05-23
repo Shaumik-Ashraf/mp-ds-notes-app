@@ -9,6 +9,9 @@
 ## No git writes from agent
 The LLM agent MUST NOT stage, commit, push, or otherwise write to git. Only the user handles git operations. The agent may request the user perform git operations.
 
+## No reading keys
+The LLM agent ABSOLUTELY MUST NOT read the contents any *.key file. Bypassing the read with commands like `cat` are also EXPLICITLY FORBIDDEN.
+
 ## Developer commands
 
 | Action | Command |

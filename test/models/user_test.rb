@@ -2,7 +2,7 @@ require "test_helper"
 
 class UserTest < ActiveSupport::TestCase
   test "user with email and password is valid" do
-    user = User.new(email: "bob@example.com", password: "password123")
+    user = User.new(email: "carol@example.com", password: "password123")
     assert user.valid?
   end
 

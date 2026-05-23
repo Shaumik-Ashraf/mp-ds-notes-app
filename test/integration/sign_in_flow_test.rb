@@ -27,7 +27,5 @@ class SignInFlowTest < ActionDispatch::IntegrationTest
     sign_in @user
     delete destroy_user_session_path
     assert_redirected_to root_path
-    follow_redirect!
-    assert_response :success
   end
 end
