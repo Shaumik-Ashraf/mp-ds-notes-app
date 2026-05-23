@@ -1,11 +1,7 @@
 <% content_for :title, "New note" %>
 
+<%= link_to "Back to notes", notes_path, class: "back-link" %>
+
 <h1>New note</h1>
 
 <%= render "form", note: @note %>
-
-<br>
-
-<div>
-  <%= link_to "Back to notes", notes_path %>
-</div>
