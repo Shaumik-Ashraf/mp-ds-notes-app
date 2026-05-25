@@ -1,0 +1,2 @@
+# Notes are created programmatically in tests.
+# Fixtures don't work well with encrypted columns.

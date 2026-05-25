@@ -1,0 +1,22 @@
+<% content_for :title, "Notes" %>
+
+<h1>Notes</h1>
+
+<%= link_to "New note", new_note_path, class: "button mb-1" %>
+
+<% if @notes.any? %>
+  <div class="notes-list">
+    <% @notes.each do |note| %>
+      <div class="note-item" id="<%= dom_id note %>">
+        <%= link_to note.body.split("\n").first.presence || "Untitled", note, class: "note-title" %>
+        <div class="note-actions">
+          <%= link_to "View", note %>
+          <%= link_to "Edit", edit_note_path(note) %>
+          <%= link_to "Delete", note, data: { method: :delete, confirm: "Delete this note?" } %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <p>No notes yet.</p>
+<% end %>

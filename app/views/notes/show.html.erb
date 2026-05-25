@@ -1,0 +1,11 @@
+<h1><%= @note.body.split("\n").first.presence || "Untitled" %></h1>
+
+<div class="note-actions-bar">
+  <%= link_to "Edit", edit_note_path(@note), class: "button" %>
+  <%= link_to "Delete", @note, class: "button button-danger", data: { method: :delete, confirm: "Delete this note?" } %>
+  <%= link_to "Back to notes", notes_path, class: "button button-outline" %>
+</div>
+
+<div class="note-body">
+  <%= @note.body %>
+</div>
